@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ljs-cu-DHk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2eY-Ic-ECM">
+            <objects>
+                <navigationController id="Ljs-cu-DHk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pi0-F9-1bM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eqE-F3-qJC" kind="relationship" relationship="rootViewController" id="Q4H-hY-zrX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMS-eO-iDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689" y="-547"/>
+        </scene>
+        <!--Unsplash Library-->
+        <scene sceneID="a3r-tV-GaZ">
+            <objects>
+                <collectionViewController id="eqE-F3-qJC" customClass="UnsplashLibraryCollectionViewController" customModule="Unsplash_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lId-UK-7tj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rX0-an-Bwu">
+                            <size key="itemSize" width="100" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="44"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="unsplashPhotoCell" id="E9L-KS-SOn" customClass="UnsplashPhotoCollectionViewCell" customModule="Unsplash_Library" customModuleProvider="target">
+                                <rect key="frame" x="20" y="54" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Author}" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXp-WI-g59">
+                                            <rect key="frame" x="0.0" y="99.5" width="100" height="20.5"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="n65-nZ-rP2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-lV-TnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="99.5"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aSq-zF-LNW">
+                                            <rect key="frame" x="32" y="32" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart-In-Button" translatesAutoresizingMaskIntoConstraints="NO" id="Hzn-G2-43O">
+                                            <rect key="frame" x="4" y="4" width="18" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="18" id="LRM-wL-JcX"/>
+                                                <constraint firstAttribute="height" constant="17" id="anZ-Dx-upq"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hzn-G2-43O" firstAttribute="top" secondItem="E9L-KS-SOn" secondAttribute="top" constant="4" id="4sh-VI-Adv"/>
+                                    <constraint firstItem="aSq-zF-LNW" firstAttribute="centerX" secondItem="lDh-lV-TnH" secondAttribute="centerX" id="9aE-dG-PCM"/>
+                                    <constraint firstItem="lDh-lV-TnH" firstAttribute="leading" secondItem="E9L-KS-SOn" secondAttribute="leading" id="GD2-Vi-qQw"/>
+                                    <constraint firstItem="Hzn-G2-43O" firstAttribute="leading" secondItem="E9L-KS-SOn" secondAttribute="leading" constant="4" id="GuV-DV-utD"/>
+                                    <constraint firstItem="yXp-WI-g59" firstAttribute="top" secondItem="lDh-lV-TnH" secondAttribute="bottom" id="KvB-WZ-Vhd"/>
+                                    <constraint firstItem="lDh-lV-TnH" firstAttribute="top" secondItem="E9L-KS-SOn" secondAttribute="top" id="UIl-0s-Ryb"/>
+                                    <constraint firstAttribute="bottom" secondItem="yXp-WI-g59" secondAttribute="bottom" id="Vav-O0-IpX"/>
+                                    <constraint firstAttribute="trailing" secondItem="yXp-WI-g59" secondAttribute="trailing" id="fgy-KI-87l"/>
+                                    <constraint firstItem="yXp-WI-g59" firstAttribute="leading" secondItem="E9L-KS-SOn" secondAttribute="leading" id="phx-Oc-Idk"/>
+                                    <constraint firstAttribute="trailing" secondItem="lDh-lV-TnH" secondAttribute="trailing" id="uC1-Mr-qHC"/>
+                                    <constraint firstItem="aSq-zF-LNW" firstAttribute="centerY" secondItem="lDh-lV-TnH" secondAttribute="centerY" id="yMp-6m-Mia"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="aSq-zF-LNW" id="SH5-dO-dky"/>
+                                    <outlet property="authorLabel" destination="yXp-WI-g59" id="2rt-y8-Y5T"/>
+                                    <outlet property="likeImage" destination="Hzn-G2-43O" id="DDq-tL-Vgp"/>
+                                    <outlet property="photoImageView" destination="lDh-lV-TnH" id="np0-64-Zzz"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewHeader" id="taW-Lq-KlF" customClass="SearchCollectionReusableView" customModule="Unsplash_Library" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gFI-gG-sF3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <scopeButtonTitles>
+                                        <string>Title</string>
+                                        <string>Title</string>
+                                    </scopeButtonTitles>
+                                    <connections>
+                                        <outlet property="delegate" destination="eqE-F3-qJC" id="C6t-Jh-swU"/>
+                                    </connections>
+                                </searchBar>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="gFI-gG-sF3" firstAttribute="top" secondItem="taW-Lq-KlF" secondAttribute="top" id="DPe-KU-raP"/>
+                                <constraint firstItem="gFI-gG-sF3" firstAttribute="leading" secondItem="taW-Lq-KlF" secondAttribute="leading" id="kll-Rg-FD4"/>
+                                <constraint firstAttribute="bottom" secondItem="gFI-gG-sF3" secondAttribute="bottom" id="oc5-Na-f7D"/>
+                                <constraint firstAttribute="trailing" secondItem="gFI-gG-sF3" secondAttribute="trailing" id="ywN-dv-G2P"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="searchBar" destination="gFI-gG-sF3" id="mLY-Uu-hcF"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="eqE-F3-qJC" id="ZaN-ye-8Xf"/>
+                            <outlet property="delegate" destination="eqE-F3-qJC" id="sTn-YM-pal"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Unsplash Library" id="zuA-4j-UmN">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="e6b-Fy-7HV"/>
+                        <barButtonItem key="rightBarButtonItem" image="OpenSafari-Button" id="dCH-5M-QuS">
+                            <connections>
+                                <action selector="goToUnsplashWeb:" destination="eqE-F3-qJC" id="eee-lF-cbF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="UGy-ng-kdT" kind="show" identifier="goToDetail" id="DG7-OR-YVN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHh-hQ-lbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="-547.37631184407803"/>
+        </scene>
+        <!--{Author}-->
+        <scene sceneID="GI6-nO-77o">
+            <objects>
+                <viewController id="UGy-ng-kdT" customClass="PhotoDetailViewController" customModule="Unsplash_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VWq-Sa-0Hx"/>
+                        <viewControllerLayoutGuide type="bottom" id="gZz-7o-XU8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DXL-QV-c6u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-JL-gZh">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DHU-mb-Lbl"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="Share-Button" id="W2x-Uw-aMy">
+                                        <connections>
+                                            <action selector="sharePhoto:" destination="UGy-ng-kdT" id="pJp-Qy-j0M"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zwc-dl-u6N"/>
+                                    <barButtonItem image="Filters-Button" id="gdx-Ih-E5c">
+                                        <connections>
+                                            <action selector="selectFilter:" destination="UGy-ng-kdT" id="ces-Ip-qAl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="m1N-AL-eU7"/>
+                                    <barButtonItem image="Heart-Out-Button" id="fWV-OF-B2F">
+                                        <connections>
+                                            <action selector="markLikedOrUnlikedPhoto:" destination="UGy-ng-kdT" id="Led-F3-raZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Mt-KJ-hax"/>
+                                    <barButtonItem image="Post-Button" id="grz-hV-AJm">
+                                        <connections>
+                                            <action selector="showPostWebPage:" destination="UGy-ng-kdT" id="QMY-RB-v4r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="Qte-77-e2m">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LG2-B7-2pd">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VTF-Iv-2qJ">
+                                <rect key="frame" x="112.5" y="392" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="tAf-Ly-7Me"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2iQ-JL-gZh" firstAttribute="leading" secondItem="DXL-QV-c6u" secondAttribute="leading" id="2iY-Mf-9J5"/>
+                            <constraint firstItem="gZz-7o-XU8" firstAttribute="top" secondItem="2iQ-JL-gZh" secondAttribute="bottom" id="9DD-oO-gnR"/>
+                            <constraint firstItem="LG2-B7-2pd" firstAttribute="centerY" secondItem="Qte-77-e2m" secondAttribute="centerY" id="Ccs-16-8k7"/>
+                            <constraint firstAttribute="trailing" secondItem="Qte-77-e2m" secondAttribute="trailing" id="FZa-3H-YpL"/>
+                            <constraint firstItem="VTF-Iv-2qJ" firstAttribute="top" secondItem="LG2-B7-2pd" secondAttribute="bottom" constant="30" id="Jfs-FY-Ie1"/>
+                            <constraint firstItem="Qte-77-e2m" firstAttribute="leading" secondItem="DXL-QV-c6u" secondAttribute="leading" id="TtA-Nm-Psz"/>
+                            <constraint firstItem="2iQ-JL-gZh" firstAttribute="top" secondItem="Qte-77-e2m" secondAttribute="bottom" id="Xb6-SI-bN1"/>
+                            <constraint firstItem="Qte-77-e2m" firstAttribute="top" secondItem="VWq-Sa-0Hx" secondAttribute="bottom" id="eJK-ob-75F"/>
+                            <constraint firstItem="VTF-Iv-2qJ" firstAttribute="centerX" secondItem="DXL-QV-c6u" secondAttribute="centerX" id="iuy-Mo-G76"/>
+                            <constraint firstAttribute="trailing" secondItem="2iQ-JL-gZh" secondAttribute="trailing" id="n8b-91-Alp"/>
+                            <constraint firstItem="LG2-B7-2pd" firstAttribute="centerX" secondItem="Qte-77-e2m" secondAttribute="centerX" id="nHm-km-qua"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="{Author}" id="KFm-we-XsL">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="K85-3i-8uJ"/>
+                        <barButtonItem key="rightBarButtonItem" image="AuthorLink-Button" id="wlb-zj-H3n">
+                            <connections>
+                                <action selector="showAuthorWebPage:" destination="UGy-ng-kdT" id="pGe-Yl-QJ6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LG2-B7-2pd" id="3p1-tJ-gVw"/>
+                        <outlet property="authorWebPageButton" destination="wlb-zj-H3n" id="Ahc-ES-ZM5"/>
+                        <outlet property="downloadProgressView" destination="VTF-Iv-2qJ" id="nEr-IT-fN7"/>
+                        <outlet property="filtersButton" destination="gdx-Ih-E5c" id="nvj-NP-sCm"/>
+                        <outlet property="likeButton" destination="fWV-OF-B2F" id="6ZW-ab-pCE"/>
+                        <outlet property="photoImageView" destination="Qte-77-e2m" id="DAB-Br-PMl"/>
+                        <outlet property="postButton" destination="grz-hV-AJm" id="hBH-OK-T0G"/>
+                        <outlet property="shareButton" destination="W2x-Uw-aMy" id="DuY-3a-BfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t4-Pf-Wih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="-547.37631184407803"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AuthorLink-Button" width="28" height="28"/>
+        <image name="Filters-Button" width="28" height="23"/>
+        <image name="Heart-In-Button" width="28" height="25"/>
+        <image name="Heart-Out-Button" width="28" height="25"/>
+        <image name="NoImage" width="200" height="200"/>
+        <image name="OpenSafari-Button" width="28" height="28"/>
+        <image name="Post-Button" width="28" height="28"/>
+        <image name="Share-Button" width="21" height="28"/>
+    </resources>
+</document>
